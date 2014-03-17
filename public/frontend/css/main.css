@@ -1,0 +1,407 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+body{ overflow:hidden;position:relative;}
+.pause_play{position:absolute; width:200px; height:90px; bottom:5px; right:40px; z-index:9999;}
+.pause_play > div{ padding:10px; text-align:center; background:rgba(0,0,0,0.7);  font-size:50px; color:#FFF; cursor: pointer; display:none;}
+.pause_play:hover > div,.pause_play > div.active{display:block;}
+#wrapper { overflow:hidden;width:1920px; height:1080px; background:url(../img/background/background1.jpg); position:relative; background-size:cover !important;}
+#wrapper > header {width:100%; height:140px; text-indent:40px; font-size:79px; color:#FFF; text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); line-height:130px;}
+#wrapper > header > .left{float:left;width:1470px; height:140px; background: #1178bb;  /* Old browsers */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1178bb), color-stop(99%,#0c5b9b)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #1178bb 0%,#0c5b9b 99%); /* Chrome10+,Safari5.1+ */
+background: radial-gradient(ellipse at center,  #1178bb 0%,#0c5b9b 99%); /* W3C */
+}
+#wrapper > header > .right{float:right;width:450px;font-size:69px;background: linear-gradient(135deg, #3b89bc 0%,#386993 100%); height:140px;}
+#wrapper > footer{position:absolute; bottom:0; left:0; width:1820px; padding:0 50px;background: -webkit-linear-gradient(top, #5e5e5e 0%,#2e2e2e 100%); 
+background: linear-gradient(to bottom, #5e5e5e 0%,#2e2e2e 100%); /* W3C */ height:100px; border-top:solid 5px #56A7D6; font-size:59px; color:#FFF;
+}
+#wrapper > footer > div{
+margin-left:-4000px;
+ -webkit-animation-name: marquee;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration:20s;
+    -webkit-animation-iteration-count: infinite;
+    margin: 0;
+    width:5000px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@-webkit-keyframes marquee{
+    0%{
+        text-indent: 95%;
+}
+    100%{
+        text-indent: -200%;  
+    }
+}
+
+
+#wrapper > main{width:1920px; height:840px; overflow:hidden;}
+#wrapper > main > .left{width:1440px; height:810px; overflow:hidden;padding:15px; float:left;}
+#wrapper > main > .left .result{width:1440px; height: 155px; margin-bottom:8px; position:relative; top:0;}
+#wrapper > main > .left .result .bar{height:155px; color:#FFF; font-size:70px; float:left; line-height:145px;text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); text-indent:30px;max-width:1280px; border-radius:0 20px 20px 0; position:relative;}
+#wrapper > main > .left .result .bar .count{position:absolute; right:0; top:0; z-index:3; font-size:100px; height:155px; width:auto; padding:0 35px; color:#000; text-shadow:none;background:#FEBF01; text-indent:0; border-radius:0 20px 20px 0;}
+#wrapper > main > .left .result .bar .count.small{font-size:75px;}
+#wrapper > main > .left .result .bar.green{background:rgba(0,140,0,0.9); }
+#wrapper > main > .left .result .bar.orange{background:rgba(255,116,0,0.9); }
+#wrapper > main > .left .result .bar.red{background:rgba(255,0,0,0.9); }
+
+#wrapper > main > .left .result .image{text-align:center; background:#EEE;float:left; border:5px solid #00D8FF; border-radius:5px; margin-left:10px;line-height:140px; width:140px; height:140px; overflow:hidden;}
+#wrapper > main > .left .result .image img{width:106%; height:106%; margin: -3% 0 0 -3%; }
+
+
+
+#wrapper > main > .right{width:420px; height:810px; overflow:hidden; padding:15px; background:rgba(255,255,255,0.3);float:right}
+#wrapper > main > .right .result{position:relative; width:100%; height:155px; margin-bottom:8px; background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#45494d), color-stop(100%,#0e0f10)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #45494d 1%,#0e0f10 100%); /* Chrome10+,Safari5.1+ */
+border-radius:20px;}
+#wrapper > main > .right .result .swirl{width:70px; height:155px; position:absolute; left:0; top:0; border-radius:20px 0 0 20px;}
+#wrapper > main > .right .result .swirl.red{background:url(../img/red_swirl.png) right;}
+#wrapper > main > .right .result .swirl.orange{background:url(../img/orange_swirl.png) right;}
+#wrapper > main > .right .result .swirl.green{background:url(../img/green_swirl.png) right;}
+#wrapper > main > .right .result .image{position:absolute;width:145px; height:140px; text-align:center; line-height:140px; overflow:hidden; top:8px; left:90px;}
+#wrapper > main > .right .result .image img{max-width:100%; max-height:100%; }
+#wrapper > main > .right .result .score{position:absolute;top:0;right:0;font-size:100px; color:#FFF; line-height:145px; width:180px; text-align:center;}
+#wrapper > main > .right .result .score.small{font-size:75px;}
+
+#wrapper > .map_left .graph_left {width:960px; height:540px;background-image:url(../img/background/background1.jpg);background-size: cover; }
+#wrapper > .map_left .graph_left h1{font-size:70px; color:#FFF; padding:30px 0; text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); margin:0; text-align:center; font-weight:normal;}
+#wrapper > .map_left .graph_left .graph{width:860px; padding:0 40px; height:70px; margin-bottom:20px; position:relative;}
+#wrapper > .map_left .graph_left .graph > div.bar{width:560px; margin-left:155px;}
+#wrapper > .map_left .graph_left .graph > div.bar > div{height:70px; position:relative;line-height:68px; color:#FFF;  text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); font-size:40px; }
+#wrapper > .map_left .graph_left .graph.php > div.bar > div{background:rgba(209,54,55,0.9);}
+#wrapper > .map_left .graph_left .graph.net > div.bar > div{background:rgba(32,158,255,0.9);}
+#wrapper > .map_left .graph_left .graph.java > div.bar > div{background:rgba(229,113,4,0.9);}
+#wrapper > .map_left .graph_left .graph.other > div.bar > div{background:rgba(90,185,83,0.9);}
+#wrapper > .map_left .graph_left .graph > div.bar .count {position:absolute; font-size:60px; left:100%; height:70px; width:auto; padding:0 15px; color:#000; text-shadow:none;background:#FEBF01; text-indent:0; border-radius:0 10px 10px 0;}
+#wrapper > .map_left .graph_left .logo{float:left; margin-left:30px; border-radius:10px; background:#EFEFEF; width:150px; text-align:center; height:80px; text-align:center; line-height:75px; position:absolute; left:0px; top:-5px;}
+#wrapper > .map_left .graph_left .logo:after{content:""; display:block; position:absolute;width:25px; background:#EFEFEF; height:70px; right:-15px; top:5px;}
+#wrapper > .map_left .graph_left .logo img{max-height:60px; max-width:130px;  }
+#wrapper > .map_left .graph_left .logo.other{color: #5ab953; font-size:80px;}
+#wrapper > .map_left{width:950px; float:left; height:1080px; position:relative; z-index:1;}
+#wrapper > .map_left  .map{width:955px; height:540px; position:absolute;bottom:0;left:0; border-top:solid 5px #1178bb; margin-left:-5px;}
+#wrapper > .map_right{width:965px; float:left; height:1080px;border-left:solid 5px #1178bb; position:relative; z-index:2;}
+#wrapper > .map_right > #map-canvas-right,#wrapper > .map_left #map-canvas-left{width:100%; height:100%;} 
+.jobHolder{width:100%; color:#FFF; height:100%; position:absolute; z-index:10000;top:0; background:white; }
+.jobHolder > div{width:1080px; margin:0 auto; position:relative;}
+.jobHolder > div #map-holder{width:1080px; height:480px; border:solid 10px #FFF; border-radius:10px;}
+.jobHolder.php {background:rgba(90,150,166,0.8);}
+.jobHolder.net  {background:rgba(0,91,161,0.8);}
+.jobHolder.java  {background:rgba(229,113,4,0.8);}
+.jobHolder.other  {background:rgba(90,185,83,0.8);}
+.jobHolder h1{font-size:60px; margin:30px 0;text-shadow: -2px 0px 1px rgba(0, 0, 0, 1);}
+.jobHolder h2{font-size:40px;text-shadow: -2px 0px 1px rgba(0, 0, 0, 1);}
+.jobHolder img.emp{position:absolute; top:60px; right:0; max-width:270px; max-height:200px; border:5px solid #FFF; border-radius:5px;}
+
+.momentumFlash{width:100%; color:#FFF; height:100%; position:absolute; z-index:10000;top:0; background:url(/frontend/img/background/momentum.jpg); }
+.momentumFlash > header{width:100%;  text-indent:50px; height:135px; font-size:79px; color:#FFF; text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); line-height:130px; border-bottom:solid 5px #A86D00;
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#FFB325), color-stop(99%,#FFA600)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #FFB325 0%,#FFA600 99%); /* Chrome10+,Safari5.1+ */
+background: radial-gradient(ellipse at center,  #FFB325 0%,#FFA600 99%); /* W3C */}
+.cvsSentFlash{width:100%; color:#FFF; height:100%; position:absolute; z-index:10000;top:0; background:url(/frontend/img/background/momentum.jpg); }
+.cvsSentFlash > header{width:100%;  text-indent:50px; height:135px; font-size:79px; color:#FFF; text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); line-height:130px; border-bottom:solid 5px #A86D00;
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#FFB325), color-stop(99%,#FFA600)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #FFB325 0%,#FFA600 99%); /* Chrome10+,Safari5.1+ */
+background: radial-gradient(ellipse at center,  #FFB325 0%,#FFA600 99%); /* W3C */}
+.momentumFlash .chart {width:100%; margin-top:40px;}
+.momentumFlash .chart .holder{position:relative;margin:0 auto; width: 1710px; padding-left:40px; height:800px; border-left:solid 5px #fff; border-bottom:solid 5px #fff;}
+.momentumFlash .chart .holder .bar_holder{width:160px; height:100%; bottom:0;margin-right:20px; position:relative; float:left;}
+.momentumFlash .chart .holder .bar_holder label{display:block; position:absolute; bottom: -60px; width:100%;  font-size:40px; text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); text-align:center;}
+.momentumFlash .chart .holder .bar_holder .bar{width:100%; position:absolute; bottom:0; left:0;border-radius:20px 20px 0 0;}
+.momentumFlash .chart .holder  .bar.green{background:rgba(0,140,0,0.9); }
+.momentumFlash .chart .holder  .bar.orange{background:rgba(255,116,0,0.9); }
+.momentumFlash .chart .holder  .bar.red{background:rgba(255,0,0,0.9); }
+
+.momentumFlash .chart .holder .bar .image{top:0; width:100%; height:160px; position:absolute; background:#FFF; border-radius:20px 20px 0 0;}
+.momentumFlash .chart .holder .bar .image img { border-radius:20px 20px 0 0;}
+.momentumFlash .chart .holder .bar .text{width:400px;-webkit-transform: rotate(-90.0deg); text-align:right; font-size:100px;  position:absolute;  top:375px; right:-160px; white-space:nowrap;  -webkit-direction:rtl;}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */http://hpricot.com/demonstrations
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

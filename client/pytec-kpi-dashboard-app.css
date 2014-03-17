@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+.widget .goodPhoto, .widget .badPhoto {max-width:310px;}
+.left div.uploader input, .right div.uploader input{width:250px;}
+.left div.uploader, .right div.uploader{width:235px;} 
+
+.left .formRight, .right .formRight{width:160px; margin:0;}
+.widgets .left.autopos:nth-child(2n+2){float:right;}
+.ui-spinner input{color:#FFF;}
+.autopos .ui-spinner{float:right}
+.autopos input[type=submit]{margin-right:0;}
+.title h5 span.right .holder{
+    float:right;
+    margin-right: 10px;
+    margin-top: -7px;
+}
+.title h5 span.right label{display:block;float:right;}
+span.right{float:right; width:200px; text-align:right; line-height:25px;}
+.content .title h5{width:696px;}
+.map{position:relative;}
+.map #map-canvas{height:500px; width:100%;}
+.map .controls{position:absolute; z-index:2; top:0; right:0; border: 1px solid #272c30;
+display: block;
+background: url(/admin/images/widgetBg.png) repeat; padding:10px; width:200px; }
+.map .controls .searchWidget{margin:0; padding:0;}
+.map .controls .saveLocation{float:right; margin-top:10px;}
+.map .controls .zoom_level_holder{float:left; line-height:30px; padding-top:10px; width:100%;}
+.noOverflow{text-overflow:ellipsis; overflow:hidden; white-space:nowrap; display:block; width:inherit;}

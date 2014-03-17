@@ -1,0 +1,1141 @@
+<head>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/admin/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+		<script type="text/javascript" src="/admin/js/plugins/spinner/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/spinner/ui.spinner.js"></script>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+		
+		<script type="text/javascript" src="/admin/js/plugins/wysiwyg/jquery.wysiwyg.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/wysiwyg/wysiwyg.image.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/wysiwyg/wysiwyg.link.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/wysiwyg/wysiwyg.table.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/flot/jquery.flot.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/flot/jquery.flot.orderBars.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/flot/jquery.flot.pie.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/flot/excanvas.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/flot/jquery.flot.resize.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/tables/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/tables/colResizable.min.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/forms/forms.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/autogrowtextarea.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/autotab.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/jquery.validationEngine-en.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/jquery.validationEngine.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/jquery.dualListBox.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/chosen.jquery.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/jquery.maskedinput.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/jquery.inputlimiter.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/forms/jquery.tagsinput.min.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/other/calendar.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/other/elfinder.min.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/uploader/plupload.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/uploader/plupload.html5.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/uploader/plupload.html4.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/uploader/jquery.plupload.queue.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.progress.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.jgrowl.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.tipsy.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.alerts.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.colorpicker.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/wizards/jquery.form.wizard.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/wizards/jquery.validate.js"></script>
+		
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.breadcrumbs.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.collapsible.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.ToTop.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.listnav.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.sourcerer.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.timeentry.min.js"></script>
+		<script type="text/javascript" src="/admin/js/plugins/ui/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="/frontend/js/jquery.animated-enhanced.js"></script>
+		<script type="text/javascript" src="/admin/js/custom.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,geometry,drawing"></script>
+		<script src="/frontend/js/clusterer.js"></script>
+		<script src="/frontend/js/moment.js"></script>
+		<script>jQuery.fx.interval = 70;</script>
+</head>
+<body>
+
+{{> applicationHolder}}
+
+</body>
+
+
+
+
+
+<template name="applicationHolder">
+  {{#if isSiteLoaded}}
+  {{#if isSystemAdminLogin}}
+	 <head>
+		
+		<link href="/admin/css/main.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css' />
+		
+		
+	  </head>	
+
+
+  	<body>
+  	{{> adminLogin}}
+  	</body>
+	4
+  {{else}}
+	  {{#if isSystemAdmin}}
+	  	<head>
+			
+			<link href="/admin/css/main.css" rel="stylesheet" type="text/css" />
+			<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css' />
+			
+			
+		  </head>	
+	
+	
+	  	<body>
+	  	{{> admin}}
+	  	</body>
+		3
+	  {{else}}
+	  	<head>
+	  		<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		    <title></title>
+		    <meta name="description" content="">
+		    <meta name="viewport" content="width=device-width">
+		
+		    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+		
+		    <link rel="stylesheet" href="/frontend/css/normalize.css">
+		    <link rel="stylesheet" href="/frontend/css/main.css">
+		    <style type="text/css">
+		    	.momentumFlash > header{width:100%;  text-indent:50px; height:135px; font-size:79px; color:#FFF; text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.6); line-height:130px; border-bottom:solid 5px #A86D00;
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#{{momentumStartColour}}), color-stop(99%,#{{momentumEndColour}})); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #{{momentumStartColour}} 0%,#{{momentumEndColour}} 99%); /* Chrome10+,Safari5.1+ */
+background: radial-gradient(ellipse at center,  #{{momentumStartColour}} 0%,#{{momentumEndColour}} 99%); /* W3C */}
+		    </style>
+		    <script src="/frontend/js/vendor/modernizr-2.6.2.min.js"></script>
+	  	</head>
+	  	<body>
+	  	{{#isolate}}
+	  	{{> frontend}}
+	  	{{/isolate}}
+	  	</body>
+		
+	  {{/if}}
+  {{/if}}
+  {{/if}}
+</template>
+
+
+
+
+
+<template name="frontend">
+	
+	<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        
+       	
+	       	{{#if isChartPage}}
+				<div id="wrapper" {{chart_background_image}}>
+	       			{{> chartPage}}
+	       		</div>
+	       	{{else}}
+				
+	       		{{> mapPage}}
+	       	{{/if}}	
+       
+	    	{{> jobFlash}}
+        
+       <div class="pause_play">
+	       			<div>Playing</div>
+	       		</div>
+	
+	 <div class="momentumFlash" id="momentumFlash" style="display:none; background:url("{{momentum_image}}";)">
+		<header>Momentum</header>
+		
+		<div class="chart">
+			{{#with chart}}
+			<div class="holder">
+				{{#each employees}}
+				<div class="bar_holder" style="width:{{chart.width}}px">
+					<div class="bar {{colour}}" style="height:{{height}}px;">
+						<div class="image" style="height:{{chart.width}}px">
+							<img src="{{employee_image}}" style="width:{{chart.width}}px" />
+						</div>
+						<div class="text" style="top:{{chart.textpos}}px">{{weight}}</div>
+					</div>
+					<label>{{employee_name}}</label>
+				</div>
+				{{/each}}
+				
+			</div>
+			{{/with}}
+		</div>
+		
+	</div>
+	<div class="cvsSentFlash" id="cvsSentFlash" style="display:none;">
+		{{#with cv_employee}}
+		<header>CVS sent Target Hit for {{employee_name}}!</header>
+		<div class="chart">
+			<div style="width:1200px; margin:150px auto;">
+			<img style="float:left;" src="{{employee_image}}" width="500" />
+			<img style="float:right;" src="/frontend/img/trophy.png" width="500" />
+			</div>
+		</div>
+		{{/with}}
+	</div>
+</template>
+
+<template name="chartPage">
+	
+		<header>
+       			<section class="left">{{chart_title}}</section>
+       			<section class="right">{{chart_previous_title}}</section>
+       		</header>
+	       	<main>
+	       		<section class="left">
+	       			<div>
+	       			{{#each employee}}
+	       			<div class="result">
+	       				<div class="bar {{bar_color}}" style="width:{{bar_width}}px;"><span class="name">{{employee_name}}</span> 
+	       					<div class="count {{employee_count_class}}">{{employee_count}}</div>	
+	       				</div>
+	       				<div class="image"><img src="{{employee_image}}" alt="" /></div>
+	       			</div>
+	       			{{/each}}
+	       			</div>
+	       		</section>
+	       		<section class="right">
+	       			<div>
+	       			{{#each previous_employee}}
+	       			<div class="result">
+	       				<div class="swirl {{previous_bar_color}}"></div>
+	       				<div class="image">
+	       					<img src="{{previous_employee_image}}" alt="" />
+	       				</div>
+	       				<div class="score {{previous_employee_count_class}}">
+	       					{{previous_employee_count}}
+	       				</div>
+	       			</div>
+	       			{{/each}}
+	       			</div>
+	       		</section>
+	       	</main>
+			<footer><div>
+	       		{{#if dashboard}}
+	       			{{#with dashboard}}
+	       			{{#constant}} 
+	       				{{message_text}}
+	       			{{/constant}}
+	       			{{/with}}
+	       		{{/if}}
+	       		</div>
+	       	</footer>
+		
+       	
+</template>
+
+<template name="mapPage">
+	<div id="wrapper">
+		
+		<section class="map_left">
+			<section class="graph_left" {{background_image}}>
+				<h1>Job Map</h1>
+				{{#each keyword_categories}}
+				<div class="graph" >
+					<div class="logo"> <img src="{{logo}}" /></div>
+					<div class="bar" >
+						<div style="width:{{width}};background:#{{colour}};"> <div class="count"> {{count}} </div></div>
+					</div>
+				</div>
+				{{/each}}
+				
+			</section>
+			<section class="map">
+				<div id="map-canvas-left"></div>
+			</section>
+		</section>
+		<section class="map_right">
+			<div id="map-canvas-right"></div>
+		</section>
+	</div>
+</template>
+
+
+
+
+
+<!-- ADMIN STUFF -->
+
+<template name="adminLogin">
+	<!-- Top navigation bar -->
+<div id="topNav">
+    <div class="fixed">
+        <div class="wrapper">
+            <div class="backTo"><a href="#" title=""><img src="/admin/images/icons/topnav/mainWebsite.png" alt="" /><span>Main website</span></a></div>
+            
+            <div class="fix"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Login form area -->
+<div class="loginWrapper">
+	<div class="loginLogo"><img src="/admin/images/loginLogo.png" alt="" /></div>
+	<div class="nNote nFailure hideit" style="display:none;">
+                <p><strong>FAILURE: </strong>Login failed</p>
+            </div>
+    <div class="loginPanel">
+        <div class="head"><h5 class="iUser">Login</h5></div>
+        
+        <form action="index.html" id="valid" class="mainForm">
+            <fieldset>
+                <div class="loginRow">
+                    <label for="req1">Username:</label>
+                    <div class="loginInput"><input type="text" name="username" value="login" class="validate[required]" id="req1" /></div>
+                    <div class="fix"></div>
+                </div>
+                
+                <div class="loginRow">
+                    <label for="req2">Password:</label>
+                    <div class="loginInput"><input type="password" name="password" value="password" class="validate[required]" id="req2" /></div>
+                    <div class="fix"></div>
+                </div>
+                
+                <div class="loginRow">
+                    
+                    <input type="submit" value="Log me in" class="basicBtn logIn" style="float:right; margin-right:25px;" />
+                    <div class="fix"></div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+	<div class="wrapper">
+    	<span>&copy; Copyright 2013. All rights reserved. Pytec </span>
+    </div>
+</div>
+
+</template>
+
+<template name="jobFlash">
+	
+	
+	<div class="jobHolder {{job_type}}" style="display:none;" id="jobHolder">
+		<header></header>
+		{{#constant}}
+		<div>
+			<h1></h1>
+			<h2></h2>
+			<img class="emp" >
+			<div id="map-holder"></div>
+		</div>
+		{{/constant}}
+	</div>
+	
+	
+	
+</template>
+
+<template name="momentumFlash">
+	
+	
+	
+	
+	
+	
+</template>
+
+<template name="admin">
+
+
+
+<!-- Top navigation bar -->
+<div id="topNav">
+    <div class="fixed">
+        <div class="wrapper">
+            <div class="welcome"><a href="#" title=""><img src="/admin/images/userPic.png" alt="" /></a><span>Welcome, {{currentUser.profile.name}}</span></div>
+            <div class="userNav">
+                <ul>
+                    <li><a href="/admin/users/edit/{{currentUser._id}}/" class="changeUrl" title=""><img src="/admin/images/icons/topnav/profile.png" alt="" /><span>Profile</span></a></li>
+                    
+                    <li><a href="#" class="logout" title=""><img src="/admin/images/icons/topnav/logout.png" alt="" /><span>Logout</span></a></li>
+                </ul>
+            </div>
+            <div class="fix"></div>
+        </div>
+    </div>
+</div>
+{{#if is404}}
+		
+		{{> admin404}}
+{{else}}
+	<!-- Header -->
+	<div id="header" class="wrapper">
+	    <div class="logo"><a href="/" title=""><img src="/admin/images/loginLogo.png" alt="" /></a></div>
+	    <div style="float:left; padding:30px 30px 0;" class="commandHolder mainForm">
+	    		<div class="holder" style="float:left;">
+		    		<select name="functionName">
+		    			<option value="showMomentum">Momentum Flash</option>
+		    			<option value="showLatestJobOnMap">Job Flash</option>
+		    			<!--<option value="changeGraph">Change Graph Page</option>-->
+		    		</select>
+	    		</div>
+	    		<div class="holder" style="float:left; margin-left:20px;"><input type="text" class="number" id="duration" value="0" name="duration" /></div>
+	    		<button  class="basicBtn submitCommand mb22"  style="float:left;  margin-left:20px;display:block">Submit</button>
+	    		
+	    </div>
+	    <div class="middleNav">
+	    	
+	    	<ul>
+	    		
+	            <li class="iStat"><a href="/admin/targets/" class="changeUrl" title=""><span>Targets</span></a></li>
+	            <li class="iUser"><a href="/admin/employees/" class="changeUrl" title=""><span>Employee List</span></a></li>
+	           
+	        </ul>
+	    </div>
+	    <div class="fix"></div>
+	</div>
+	
+	
+	<!-- Content wrapper -->
+	<div class="wrapper">
+		
+		<!-- Left navigation -->
+		
+		
+			{{> adminNav}}
+		    
+		    <!-- Content -->
+		    <div class="content">
+		    	{{> adminPage}}
+		    </div>
+		
+	    <div class="fix"></div>
+	</div>
+{{/if}}
+<!-- Footer -->
+<div id="footer">
+	<div class="wrapper">
+    	<span>&copy; Copyright 2013. All rights reserved. Pytec </span>
+    </div>
+</div>
+
+</template>
+
+<template name="admin404">
+	<div class="wrapper">
+		<div class="errorPage">
+	        <h2 class="red errorTitle"><span>Something went wrong here</span></h2>
+	        <h1>404</h1>
+	        <span class="bubbles"></span>
+	        <p>Oops! Sorry, an error has occured. Requested page not found!</p>
+	        <div class="backToDash"><a href="/admin/dashboard/" onclick="Router.navigate('/admin/dashboard/',true); return false;" title="" class="seaBtn button">Back to Dashboard</a></div>
+	    </div>
+	</div>
+</template>
+
+<template name="adminNav">
+	<div class="leftNav">
+    	<ul id="menu">
+    		{{#each listArray}}
+    			<li class="{{iconClass}}"><a href="{{href}}" class="{{classToShow}}"><span>{{name}}</span></a>
+    				{{#if subMenu}}
+    					<ul class="sub">
+    						{{#each subItems}}
+    						<li><a href="{{href}}">{{name}}</a></li>
+    						{{/each}}
+    					</ul>
+    				{{/if}}
+    			</li>
+    		{{/each}}
+        	
+
+        </ul>
+    </div>
+    
+</template>
+
+
+<template name="adminPage">
+	
+	{{#if showDashboard}}
+	
+		{{> adminDashboard}}
+	{{/if}}
+	{{#if showEmployees}}
+	
+		{{> adminEmployees}}
+	{{/if}}
+	{{#if showTargets}}
+	
+		{{> adminTargets}}
+	{{/if}}
+	{{#if showMomentum}}
+		{{> adminMomentum}}
+	{{/if}}
+	
+	{{#if showColours}}
+	
+		{{> adminColours}}
+	{{/if}}
+	{{#if showMapControls}}
+		{{> adminMapControls}}
+	{{/if}}
+	{{#if showUsers}}
+		{{> adminUsers}}
+	{{/if}}
+</template>
+
+
+
+<template name="adminDashboard">
+	{{#if dashboard}}
+		{{#with dashboard}}
+			{{#if isAdminDashboardIndex}}
+			<div class="title"><h5>Dashboard</h5></div>
+			{{#constant}}
+			<div class="nNote nSuccess hideit" style="display:none;">
+	            <p><strong>UPDATED: </strong>Your settings has been updated</p>
+	        </div>  
+	        {{/constant}}
+			<form class="mainForm" id="valid">
+		<fieldset> 
+                <div class="widget first">
+                    <div class="head"><h5 class="iList">Change Site Settings</h5></div>
+                        <div class="rowElem nobg"><label>Site Message: </label><div class="formRight"><div class="holder"><input type="text"  name="message_text" id="message_text" value="{{message_text}}"> </div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Job Flash Duration: </label><div class="formRight"><div class="holder"><input type="text" name="job_duration" class="number" id="s1" value="{{job_duration}}" name="{{job_duration}}" /></div></div><div class="fix"></div></div>
+                        <div class="rowElem">
+	                        <label>Job sound :</label> 
+	                        <div class="formRight">
+	                            <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" id="jobAudio" size="24" style="opacity: 0;"><span class="filename">Select a file</span><span class="action">Choose File</span></div>
+	                        	<a href="#" class="playSound">Click to play current sound</a>
+	                        </div>
+	                        <div class="fix"></div>
+                   		</div>
+                
+
+                        <input type="submit" value="Submit form" class="basicBtn submitForm mb22">
+                        <div class="fix"></div>
+ 
+                </div>
+               
+            </fieldset>
+	</form>
+			{{/if}}
+		{{/with}}
+	{{/if}}
+</template>
+
+<!--- ADMIN MOMENTUM -->
+
+
+<template name="adminMomentum">
+	{{#if isAdminMomentumPercentages}}
+		{{> adminMomentumPercentages}}
+	{{/if}}
+	{{#if isAdminMomentumSettings}}
+		{{> adminMomentumSettings}}
+	{{/if}}
+	{{#if isAdminMomentumThreshold}}
+		{{> adminMomentumThreshold}}
+	{{/if}}
+</template>
+<template name="adminMomentumThreshold">
+	<div class="title"><h5>Momentum Threshold</h5></div>
+	<div class="nNote nNumberSuccess nSuccess hideit" style="display:none;">
+        <p><strong>UPDATED: </strong>The momentum thresholds have been updated</p>
+    </div> 
+    <div class="mainForm">
+		<div class="widget first">
+			<div class="head"><h5 class="iList">Change Momentum Thresholds</h5></div>
+                    {{#each thresholds}}
+                    
+                        <div class="rowElem threshold" data-id="{{_id}}"><label>{{day}} </label><div class="formRight">
+                        	<div class="holder"><label>Orange Threshold: <input type="text"  name="orange" class="number" id="s1"  value="{{orange}}"> </label></div>
+                        	<div class="holder"><label>Green Threshold: <input type="text"  name="green" class="number" id="s1"  value="{{green}}"> </label></div>
+                        </div><div class="fix"></div></div>
+                    {{/each}}
+                    <div class="rowElem">
+                    <input type="submit" value="Submit form" class="basicBtn submitForm mb22">
+                    <div class="fix"></div>
+                   	</div>
+        </div>
+    </div>
+</template>
+<template name="adminMomentumPercentages">
+	<div class="title"><h5>Momentum Targets</h5></div>
+	<div class="nNote nNumberSuccess nSuccess hideit" style="display:none;">
+	            <p><strong>UPDATED: </strong>The momentum targets have been updated</p>
+	        </div> 
+	<div class="nNote nFailure  hideit" style="display:none;">
+	            <p><strong>ERROR: </strong>The total should add up to 100%</p>
+	        </div> 
+	<div class="mainForm">
+		<div class="widget first">
+			<div class="head"><h5 class="iList">Change Momentum Percentages</h5></div>
+                    {{#each momentums}}
+                    
+                        <div class="rowElem momentumHolder"><label>{{description}} </label><div class="formRight"><div class="holder"><input type="text"  name="{{_id}}" class="number" id="s1"  value="{{value}}"> </div></div><div class="fix"></div></div>
+                    {{/each}}
+                    <div class="rowElem">
+                    <input type="submit" value="Submit form" class="basicBtn submitNumberForm mb22">
+                   	</div>
+        </div>
+    </div>
+</template>
+<template name="adminMomentumSettings">
+	<div class="title"><h5>Momentum Targets</h5></div>
+	<div class="mainForm">
+        <div class="nNote nSuccess nSettingsSuccess hideit" style="display:none;">
+	            <p><strong>UPDATED: </strong>The momentum settings have been updated</p>
+	        </div> 
+        <div class="widget">
+        				<div class="head"><h5 class="iList">Change Momentum Settings</h5></div>
+
+                    {{#with settings}}
+                        <div class="rowElem"><label>Interval between flash (seconds) </label><div class="formRight"><div class="holder"><input type="text"  name="momentum_interval" class="number" id="s1"  value="{{momentum_interval}}"> </div></div><div class="fix"></div></div>
+						<div class="rowElem"><label>Time to show (seconds) </label><div class="formRight"><div class="holder"><input type="text"  name="momentum_time_to_show" class="number" id="s1"  value="{{momentum_time_to_show}}"> </div></div><div class="fix"></div></div>
+						
+						<div class="rowElem">
+	                        <label>Momentum sound :</label> 
+	                        <div class="formRight">
+	                            <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" id="momentumAudio" size="24" style="opacity: 0;"><span class="filename">Select a file</span><span class="action">Choose File</span></div>
+	                        	{{#if momentum_audio}}<a href="#" class="playMomentumSound">Click to play current sound</a>{{/if}}
+	                        </div>
+	                        <div class="fix"></div>
+                   		</div>
+                   		<div class="rowElem">
+	                        <label>Momentum image :</label> 
+	                        <div class="formRight">
+	                            <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" id="momentumImage" size="24" style="opacity: 0;"><span class="filename">Select a file</span><span class="action">Choose File</span></div>
+	                        	
+	                        </div>
+	                        <div class="fix"></div>
+                   		</div>
+                   		{{#if momentum_image}}
+			            	<div class="rowElem imageRow">
+			                    <img src="{{momentum_image}}" style="max-width:310px;" class="targetImage" alt="Momentum Image" />    
+			            	</div>
+		            	{{/if}}
+	                    <div class="rowElem"><label>Scheduled time</label>
+							<div class="formRight">
+								<div class="holder">
+									<select name="momentumScheduledDay">
+										<option {{#if dayIs "Monday"}} selected {{/if}} value="Monday">Monday</option>
+										<option {{#if dayIs "Tuesday"}} selected {{/if}} value="Tuesday">Tuesday</option>
+										<option {{#if dayIs "Wednesday"}} selected {{/if}} value="Wednesday">Wednesday</option>
+										<option {{#if dayIs "Thursday"}} selected {{/if}} value="Thursday">Thursday</option>
+										<option {{#if dayIs "Friday"}} selected {{/if}} value="Friday">Friday</option>
+										<option {{#if dayIs "Saturday"}} selected {{/if}} value="Saturday">Saturday</option>
+										<option {{#if dayIs "Sunday"}} selected {{/if}} value="Sunday">Sunday</option>
+									</select>
+									<input type="time" value="{{momentum_scheduled_time}}" name="momentumScheduledTime" style="margin-left:20px;" />
+								</div>
+							</div>
+							
+							<div class="fix"></div>
+						</div>
+						<div class="rowElem">
+	                        <label>Scheduled sound :</label> 
+	                        <div class="formRight">
+	                            <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" id="scheduledAudio" size="24" style="opacity: 0;"><span class="filename">Select a file</span><span class="action">Choose File</span></div>
+	                        	{{#if scheduled_audio}}<a href="#" class="playScheduledSound">Click to play current sound</a>{{/if}}
+	                        </div>
+	                        <div class="fix"></div>
+                   		</div>
+						<div class="rowElem">
+	                        <label>Scheduled image :</label> 
+	                        <div class="formRight">
+	                            <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" id="scheduledImage" size="24" style="opacity: 0;"><span class="filename">Select a file</span><span class="action">Choose File</span></div>
+	                        	
+	                        </div>
+	                        <div class="fix"></div>
+                   		</div>
+                   		{{#if scheduled_image}}
+			            	<div class="rowElem imageRow">
+			                    <img src="{{scheduled_image}}" style="max-width:310px;" class="targetImage" alt="Momentum Image" />    
+			            	</div>
+		            	{{/if}}
+               		{{/with}}
+					<div class="rowElem">
+                    <input type="submit" value="Submit form" class="basicBtn submitSettingsForm mb22">
+                   	</div>
+                    <div class="fix"></div>
+ 
+                </div>
+     </div>
+</template> 
+<template name="adminColours">
+	<div class="title"><h5>Colours</h5></div>
+	<div class="nNote nSuccess hideit" style="display:none;">
+	            <p><strong>UPDATED: </strong>The colours have been updated</p>
+	        </div> 
+	<div class="mainForm">
+		<div class="widget first">
+			<div class="head"><h5 class="iList">Change Colours</h5></div>
+                    {{#each keyword_categories}}
+                    
+                        <div class="rowElem keywordCategory"><label>{{category_name}} </label><div class="formRight"><div class="holder"><input type="text" class="colourpicker"  name="{{_id}}"  value="{{colour}}"> </div></div><div class="fix"></div></div>
+                    {{/each}}
+                    {{#each colour_setting}}
+                    	<div class="rowElem settingHolder"><label>{{name}} </label><div class="formRight"><div class="holder"><input type="text" class="colourpicker"  name="{{_id._str}}"  value="{{colour}}"> </div></div><div class="fix"></div></div>
+                    {{/each}}
+					<div class="rowElem">
+                    <input type="submit" value="Submit form" class="basicBtn submitForm mb22">
+                   	</div>
+                    <div class="fix"></div>
+ 
+                </div>
+     </div>
+</template> 
+<!-- EMPLOYEES SECTION -->
+<template name="adminEmployees">
+	{{#if isAdminEmployeesIndex}}
+		{{> adminEmployeesIndex}}
+	{{/if}}
+	{{#if isAdminEmployeesView}}
+		{{> adminEmployeesView}}
+	{{/if}}
+	
+</template>
+<template name="adminEmployeesIndex">
+	<div class="title"><h5>Employees</h5></div>
+		<div class="widget first">
+        	<div class="head"><h5 class="iFrames">List of Employees</h5></div>
+            <table cellpadding="0" cellspacing="0" border="0" class="display">
+            	<thead>
+                	<tr>
+                        <th width="25%">Employee ID</th>
+                        <th width="60%">Employee names</th>
+                        <th width="5%">Active</th>
+                     	<th width="10%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                	{{#each employee}}
+                	<tr>
+                        <td>{{employee_id}}</td>
+                        <td>{{title}} {{first_name}} {{last_name}} {{nickname_text}}</td>
+                        <td>
+                        	<div class="holder"><input type="checkbox" class="active" name="activeCheckbox" {{isEmployeeActiveCheckbox}} ></div>
+                        </td>
+                        <td align="middle" valign="middle">
+                        	<a href="/admin/employees/view/{{employee_id}}/" class="changeUrl button seaBtn">View</a>
+                        </td>
+                        
+                     	
+                    </tr>
+                    {{/each}}
+                    
+                </tbody>
+            </table> 
+        </div>
+</template> 
+<template name="adminEmployeesView">
+{{#if employee}}
+	{{#with employee}}
+	<div class="title"><h5>Viewing {{title}} {{first_name}} {{last_name}} <span class="right"><label for="activeCheckbox">Active</label><div class="holder"><input type="checkbox" class="active" name="activeCheckbox" {{isEmployeeActiveCheckbox}} ></div></span></h5></div>
+	<div class="stats">
+		<ul>
+	    	<li><a href="#" class="count grey" title="">{{cvs_sent.day}}</a><span>CVs sent</span></li>
+	        
+	        <li><a href="#" class="count orange" title="">{{client_contacts.day}}</a><span>client contacts</span></li>
+	        <li><a href="#" class="count green" title="">{{new_vacancies.day}}</a><span>new vacancies</span></li>
+	        <li class="last"><a href="#" class="count red" title="">{{first_interviews.day}}</a><span>first interviews</span></li>
+	    </ul>
+	    <div class="fix"></div>
+	</div>
+	{{#constant}}
+	<div class="nNote nSuccess hideit" style="display:none;">
+	            <p><strong>UPDATED: </strong>{{title}} {{first_name}} {{last_name}} has been updated</p>
+	        </div> 
+	{{/constant}}
+	<form class="mainForm clearfix" id="valid">
+		<fieldset> 
+                <div class="widget first">
+                    <div class="head"><h5 class="iList">Employee Details</h5></div>
+                        <div class="rowElem nobg"><label>Nickname </label><div class="formRight"><div class="holder"><input type="text"  name="nick_name" id="nick_name" value="{{nick_name}}"> </div></div><div class="fix"></div></div>
+                       
+                        <input type="submit" value="Submit form" class="basicBtn submitNickname mb22" style="float:right; margin-right:15px;" id="nick_name_holder">
+                        <div class="fix"></div>
+ 
+                </div>
+            </fieldset>
+	</form>
+	<div class="widgets">
+		
+		<div class="left">
+            
+            <!-- Statistics -->
+            <div class="widget">
+            	<div class="head"><h5 class="iUser">Good Photo</h5></div>
+                <div class="rowElem">
+
+                        <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" id="fileInput" size="24" name="goodPhoto" style="opacity: 0;"><span class="filename">Select a new file</span><span class="action">Choose File</span></div>
+                        <button class="basicBtn savePhoto" id="goodPhoto">Save</button>
+                        
+                 
+         
+                        
+                </div>
+                <div class="fix"></div>
+                
+                {{#if good_photo}}
+	            	<div class="rowElem">
+	            		
+	                    <img src="{{good_photo}}" class="goodPhoto" alt="{{employee.first_name}}" />    
+	            	</div>	
+            	{{/if}}
+            </div>
+        	
+            <div class="fix"></div>                 
+        </div>
+        <div class="right">
+            
+             
+                
+            <!-- Statistics -->
+            <div class="widget">
+            	<div class="head"><h5 class="iUser2">Bad Photo</h5></div>
+                <div class="rowElem">
+                 
+                    
+                        <div class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" name="badPhoto" size="24" style="opacity: 0;"><span class="filename">Select a new file</span><span class="action">Choose File</span></div>
+                        <button class="basicBtn savePhoto" id="badPhoto">Save</button>
+                        
+                        
+                </div>
+                <div class="fix"></div>
+                {{#if bad_photo}}
+	            	<div class="rowElem">
+	                    <img src="{{bad_photo}}" class="badPhoto" alt="{{employee.first_name}}" />    
+	            	</div>
+            	{{/if}}
+            </div>
+        	
+            <div class="fix"></div>                 
+        </div>
+        <div class="fix"></div>  
+        {{#if targetCategory}}
+		<div class="mainForm">
+	<div class="nNote nTargetSuccess hideit" style="display:none;">
+	            <p><strong>UPDATED: </strong>{{title}} {{first_name}} {{last_name}} has been updated</p>
+	        </div> 
+		<div class="title" style="margin-top:20px;"><h5>Targets</h5></div>
+		{{#each targetCategory}}
+		<div class="left autopos">
+			<div class="widget">
+                    <div class="head"><h5 class="iChart8">{{target_title}}</h5></div>
+                    
+                    {{#each target_periods}}
+                    	 <div class="rowElem">
+                    	 	<label><span class="target_period_title">{{target_period_title}}</span>:</label><div class="formRight"><input name="target" data-period="{{target_period}}" type="text" class="number" id="s1" value="{{employee_target_number}}" name="{{target_period}}" /></div>
+                    	 
+                    	 
+                    	 </div>
+                    {{/each}}
+                    
+                    
+                    <div class="rowElem">
+                    	<input type="submit" value="Save Targets" class="basicBtn saveTarget">
+                    	<div class="fix"></div>
+                    </div> 
+            </div>
+        </div>  
+        {{else}}
+        	  <div class="title"><h5>No targets set!</h5></div>
+		{{/each}}
+		</div>
+	{{/if}}
+	</div>
+	{{/with}}
+{{/if}}
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----- TARGETS SECTION ------>
+<template name="adminTargets">
+	{{#if isAdminTargetsIndex}}
+		{{> adminTargetsIndex}}
+	{{/if}}
+	
+	
+</template>
+<template name="adminTargetsIndex">
+	<div class="title"><h5>Targets</h5></div>
+	<div>   
+		{{#constant}}       
+        <div class="nNote nSuccess hideit" style="display:none;">
+            <p><strong>UPDATED: </strong>Your targets have been updated</p>
+        </div>  
+        {{/constant}}
+    </div>
+	{{#if targetCategory}}
+		<div class="widgets">
+		
+		{{#each targetCategory}}
+		<div class="left autopos">
+			<div class="widget">
+                    <div class="head"><h5 class="iChart8">{{target_title}}</h5></div>
+                    
+                    {{#each target_periods}}
+                    	 <div class="rowElem targetPeriod">
+                    	 	<label><span class="target_period_title">{{target_period_title}}</span>:</label><div class="formRight"><input name="target" type="text" class="number" id="s1" value="{{target_number}}" name="{{target_period}}" /></div><div style="height:10px;" class="fix"></div>
+                    		<label><span class="seconds_to_show">Seconds to show</span>:</label><div class="formRight"><input type="text" name="seconds" class="number" id="s1" value="{{seconds_to_show}}" name="{{target_period}}" /></div><div style="height:10px;" class="fix"></div>
+                    	 	<label><span class="active">Active: </span></label><div class="formRight"><div class="holder" style="float:right"><input type="checkbox" style="float:right;" class="uniform" name="active" {{target_active_checkbox}} /></div></div><div class="fix"></div>
+                    	 	
+                    	 
+                    	 </div>
+                    {{/each}}
+                    <div class="rowElem">
+                    <label><span class="active">Show on charts: </span></label><div class="formRight"><div class="holder" style="float:right"><input type="checkbox" style="float:right;" class="uniform" name="charts" {{target_charts_checkbox}} /></div></div><div class="fix"></div>
+            	 	</div>
+            	 	<div class="rowElem">
+            	 	<label><span class="active">Show on momentum: </span></label><div class="formRight"><div class="holder" style="float:right"><input type="checkbox" style="float:right;" class="uniform" name="momentum" {{target_momentum_checkbox}} /></div></div><div class="fix"></div>
+                    </div>
+                    <div class="rowElem draganddrop imageRow">
+                    	<label style="width:70px;">Image:&nbsp;&nbsp;</label><div style="float:right;" class="uploader" id="uniform-fileInput"><input type="file" class="fileInput" name="targetImage" size="24" style="opacity: 0;"><span class="filename">Select a new file</span><span class="action">Choose Background Image</span></div>
+
+                    </div>
+                    {{#if target_image}}
+		            	<div class="rowElem imageRow">
+		                    <img src="{{target_image}}" style="max-width:310px;"class="targetImage" alt="{{target_title}}" />    
+		            	</div>
+	            	{{/if}}
+                    <div class="rowElem">
+                    	<input type="submit" value="Save Targets" class="basicBtn submitForm">
+                    	<div class="fix"></div>
+                    </div> 
+            </div>
+        </div>  
+        {{else}}
+        	  <div class="title"><h5>No targets set!</h5></div>
+		{{/each}}
+		
+		</div>
+	{{/if}}
+</template>
+
+
+
+<!----- MAP CONTROLS SECTION ------>
+<template name="adminMapControls">
+	{{#if isAdminMapControlsIndex}}
+		{{> adminMapControlsIndex}}
+	{{/if}}
+	
+	
+</template>
+
+<template name="adminMapControlsIndex">
+	<div class="title"><h5>Saved Map Locations</h5></div>
+	<div class="widget first">
+                    <div class="head"><h5 class="iList">Change Map Settings</h5></div>
+                    <div class="rowElem">
+                        <label>Map background :</label> 
+                        <div class="formRight">
+                            <div class="uploader" id="uniform-fileInput"><input type="file" class="mapImage" id="mapImage" size="24" style="opacity: 0;"><span class="filename">Select a file</span><span class="action">Choose File</span></div>
+                        </div>
+                        <div class="fix"></div>
+                    </div>
+               		{{#if mapImage}}
+		            	<div class="rowElem imageRow">
+		                    <img src="{{mapImage}}" style="max-width:100%;" class="mapImage" alt="Map Image" />    
+		            	</div>
+	            	{{/if}}
+					<div class="rowElem">
+                    <input type="submit" value="Submit form" class="basicBtn submitImageForm mb22">
+                   	</div>
+                    <div class="fix"></div>
+ 
+                </div>
+	<div class="widget ">
+		<div class="head"><h5 class="iMap">Choose a New Location</h5></div>
+		<div>
+			<div class="map">
+				{{> adminMapControlsMap}}
+			</div>
+		</div>
+	</div>
+	<div class="widget">
+    	<div class="head"><h5 class="iPin">List of Map Locations</h5></div>
+        <table cellpadding="0" cellspacing="0" border="0" class="display">
+        	<thead>
+            	
+            </thead>
+            <tbody>
+            	{{#if mapLocations}}
+            		<tr><th width="10%"></th>
+	                    <th width="40%">Location area</th>
+	                    <th width="20%">Bounds</th>
+	                    <th width="10%">Seconds</th>
+	                 	<th width="15%"></th>
+	                </tr>
+            		{{#each mapLocations}}
+            		
+	            	<tr>
+	            		<td><div style="position:relative; height:20px; padding-left:7px;">
+	            			<div class="ui-spinner-down arrow up"></div>
+	            			<div class="ui-spinner-up arrow down"></div>
+	            			
+	            		</div></td>
+	                    <td><span class="noOverflow" style="width:348px;">{{location}}</span></td>
+	                    <td><span class="noOverflow" style="width:171px;">{{view_port}}</span></td>
+	                    <td>
+	                    	<input type="text" style="width:20px;" class="time_to_show" name="time_to_show" value="{{time_to_show}}" />
+	                    </td>
+	                    <td align="middle" valign="middle">
+	                    	<a href="#" class="button deleteLocation redBtn">Delete</a>
+	                    </td>
+	                    
+	                 	
+	                </tr>
+	                {{/each}}
+            	{{else}}
+            		<tr><td colspan="4" align="center">No locations saved</td></tr>
+            	{{/if}}
+            	
+                
+            </tbody>
+        </table> 
+    </div>
+</template>
+<template name="adminMapControlsMap">
+	
+	<div class="controls">
+		<div class="searchWidget">
+                	<form action="">
+                    	<input type="text" name="search" id="ac" placeholder="Enter a location to search for..." class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <input type="submit" name="find" value="">
+                        
+                        <div class="zoom_level_holder">Seconds: <span class="time" style="float:right"><input style="width:40px;" type="text" name="seconds" class="number" id="s1" value="10" name="seconds" /></span></div>
+                      
+                        <button class="basicBtn saveLocation" style="margin-top:7px;">Save Viewport</button>
+                    </form>
+                </div>
+		
+	</div>
+	{{#constant}}
+	<div id="map-canvas"></div>
+	{{/constant}}
+</template>
+
+
+<!--- ADMIN USERS SECTION -->
+<template name="adminUsers">
+	{{#if isAdminUsersIndex}}
+		{{> adminUsersIndex}}
+	{{/if}}
+	{{#if isAdminUsersAddUser}}
+		{{> adminUsersAddUser}}
+	{{/if}}
+	{{#if isAdminUsersEditUser}}
+	
+		{{> adminUsersEditUser}}
+	{{/if}}
+</template>
+
+<template name="adminUsersIndex">
+	<div class="title"><h5>Admin Users</h5></div>
+		<div class="widget first">
+        	<div class="head">
+        		<h5 class="iFrames">List of Admin Users</h5>
+        		<div class="num"><a href="/admin/users/add/" class="blueNum addUser changeUrl">Add new user</a></div>
+        	</div>
+            <table cellpadding="0" cellspacing="0" border="0" class="display">
+            	<thead>
+                	<tr>
+                        <th width="25%">Username</th>
+                        <th width="45%">Full name</th>
+                        <th width="5%">Active</th>
+                     	<th width="20%"></th>
+                 </tr> 
+                </thead>
+                <tbody>
+                	{{#each adminUsers}}
+                	<tr>
+                        <td>{{username}}</td>
+                        <td>{{profile.name}}</td>
+                        <td>
+                        	<div class="holder"><input type="checkbox" class="active" name="activeCheckbox" {{isUserActiveCheckbox}}></div>
+                        </td>
+                        <td align="middle" valign="middle">
+                        	<a href="/admin/users/edit/{{_id}}/" class="changeUrl button seaBtn">Edit</a>
+                        	<a href="#" class="button redBtn delete">Delete</a>
+                        </td>
+                        
+                     	
+                    </tr>
+                    {{/each}}
+                    
+                </tbody>
+            </table> 
+        </div>
+</template>
+<template name="adminUsersAddUser">
+	<form class="mainForm" id="valid">
+		<fieldset> 
+                <div class="widget first">
+                    <div class="head"><h5 class="iList">User Details</h5></div>
+                        <div class="rowElem nobg"><label>Username: <span class="req">*</span></label><div class="formRight"><div class="holder"><input type="text" class="validate[required]" name="username" id="username"></div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Password: <span class="req">*</span></label><div class="formRight"><div class="holder"><input type="password" id="password" class="validate[required]" name="password"></div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Full Name: <span class="req">*</span></label><div class="formRight"><div class="holder"><input id="fullname" type="text" class="validate[required]" name="fullname"></div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Active:</label><div class="formRight"><div class="holder"><input type="checkbox" name="active"></div></div><div class="fix"></div></div>
+                        <input type="submit" value="Submit form" class="basicBtn submitForm mb22">
+                        <div class="fix"></div>
+ 
+                </div>
+            </fieldset>
+	</form>
+</template> 
+<template name="adminUsersEditUser">
+	{{#if adminUser}}
+	{{#with adminUser}}
+	<form class="mainForm" id="valid">
+		<fieldset> 
+                <div class="widget first">
+                    <div class="head"><h5 class="iList">User Details</h5></div>
+                        <div class="rowElem nobg"><label>Username: <span class="req">*</span></label><div class="formRight"><div class="holder"><input type="text" class="validate[required]" name="username" value={{username}} id="username"></div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Password (leave blank for same): <span class="req">*</span></label><div class="formRight"><div class="holder"><input type="password" id="password" name="password"></div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Full Name: <span class="req">*</span></label><div class="formRight"><div class="holder"><input id="fullname" type="text" class="validate[required]" name="fullname" value="{{profile.name}}"></div></div><div class="fix"></div></div>
+                        <div class="rowElem"><label>Active:</label><div class="formRight"><div class="holder"><input type="checkbox" name="active" {{isUserActiveCheckbox}}></div></div><div class="fix"></div></div>
+                        <input type="submit" value="Submit form" class="basicBtn submitForm mb22">
+                        <div class="fix"></div>
+ 
+                </div>
+            </fieldset>
+	</form>
+	{{/with}}
+	{{/if}}
+</template>

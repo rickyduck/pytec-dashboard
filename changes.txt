@@ -1,0 +1,6 @@
+charts - up to 100 chart based on that
+number on end
+logos on left in a container
+Other - green o in container
+border on map
+pause / play
